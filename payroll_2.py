@@ -11,6 +11,11 @@ Holiday_OT = 3
 # State_tax = 10%
 # FICA = 2%
 
+print(f"Welcome {name}, this system will print your weekly paycheck.\n"
+      f"Our system only accepts real numbers as a valid input.\n"
+      f"The sky is the limit for your pay rate!!!\n"
+      f"We do know that you can't work more hours than there are in a week, so no funny business!!\n")
+
 total = 0
 count = 0
 employees = int(input("How many employees: "))
@@ -22,7 +27,7 @@ name = str(input("What is your name: "))
 print("Hi", name)
 while True:
     try:
-        hourly_rate = int(input("What is your hourly rate: "))
+        hourly_rate = float(input("What is your desired hourly pay rate: "))
     except ValueError:
         print("Error. Try again!")
         continue
