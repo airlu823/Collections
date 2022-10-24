@@ -35,13 +35,13 @@ while True:
 
 while True:
     try:
-        hours = int(input("How many hours were worked: "))
+        hours = float(input("How many hours were worked: "))
     except ValueError:
         print("Error. Try again!")
         continue
     else:
         break
-holiday_work = int(input("How many holiday hours worked: "))
+holiday_work = float(input("How many holiday hours worked: "))
 
 print(f"Employee: ", name)
 print(f"Hourly rate: ", hourly_rate)
@@ -74,4 +74,3 @@ fica = total * 0.02
 print("FICA: ", fica)
 net_pay = total - (fed_tax + state_tax + fica)
 print("Net pay: ", net_pay)
-
