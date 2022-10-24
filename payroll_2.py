@@ -26,7 +26,7 @@ print(f"Welcome {name}, this system will print your weekly paycheck.\n"
 
 while True:
     try:
-        hourly_rate = float(input("What is your desired hourly pay rate: "))
+        hourly_rate = float(input("What is your desired hourly pay rate: $"))
     except ValueError:
         print("Error. Try again!")
         continue
@@ -44,7 +44,7 @@ while True:
 holiday_work = float(input("How many holiday hours worked: "))
 
 print(f"Employee: ", name)
-print(f"Hourly rate: ", hourly_rate)
+print(f"Hourly rate: $", hourly_rate)
 print(f"Hours worked: ", hours)
 
 if hours >= 40:
@@ -52,7 +52,7 @@ if hours >= 40:
 else:
     regular = hours * hourly_rate
 
-print(f"Regular Pay: ", regular)
+print(f"Regular Pay: $", regular)
 
 overtime = (hours-Reg_Hours) * (hourly_rate * Overtime_Pay)
 
@@ -61,16 +61,16 @@ if overtime <= 0:
 else:
     overtime = (hours-Reg_Hours) * (hourly_rate * Overtime_Pay)
     
-print(f"Overtime Pay: ", overtime)
+print(f"Overtime Pay: $", overtime)
 holiday_pay = (holiday_work * hourly_rate * 2)
-print("Holiday Pay, If any: ", holiday_pay)
+print("Holiday Pay, If any: $", holiday_pay)
 total = regular + overtime + holiday_pay
-print("Gross Pay: ", total)
+print("Gross Pay: $", total)
 fed_tax = total * 0.15
-print("Federal tax: ", fed_tax)
+print("Federal tax: $", fed_tax)
 state_tax = total * 0.10
-print("State tax: ", state_tax)
+print("State tax: $", state_tax)
 fica = total * 0.02
-print("FICA: ", fica)
+print("FICA: $", fica)
 net_pay = total - (fed_tax + state_tax + fica)
-print("Net pay: ", net_pay)
+print("Net pay: $", net_pay)
