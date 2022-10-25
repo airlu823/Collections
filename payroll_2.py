@@ -52,7 +52,7 @@ if hours >= 40:
 else:
     regular = hours * hourly_rate
 
-print(f"Regular Pay: $", regular)
+print(f"Regular Pay: $", '%.2f' % regular)
 
 overtime = (hours-Reg_Hours) * (hourly_rate * Overtime_Pay)
 
@@ -61,16 +61,16 @@ if overtime <= 0:
 else:
     overtime = (hours-Reg_Hours) * (hourly_rate * Overtime_Pay)
     
-print(f"Overtime Pay: $", overtime)
+print(f"Overtime Pay: $", '%.2f' % overtime)
 holiday_pay = (holiday_work * hourly_rate * 2)
-print("Holiday Pay, If any: $", holiday_pay)
+print("Holiday Pay, If any: $", '%.2f' % holiday_pay)
 total = regular + overtime + holiday_pay
-print("Gross Pay: $", total)
+print("Gross Pay: $", '%.2f' % total)
 fed_tax = total * 0.15
-print("Federal tax: $", fed_tax)
+print("Federal tax: $", '%.2f' % fed_tax)
 state_tax = total * 0.10
-print("State tax: $", state_tax)
+print("State tax: $", '%.2f' % state_tax)
 fica = total * 0.02
-print("FICA: $", fica)
+print("FICA: $", '%.2f' % fica)
 net_pay = total - (fed_tax + state_tax + fica)
-print("Net pay: $", net_pay)
+print("Net pay: $", '%.2f' % net_pay)
